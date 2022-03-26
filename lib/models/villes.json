@@ -1,0 +1,33 @@
+{
+    "id": 268,
+    "nom": "Ndzomoé",
+    "parent": {
+        "id": 219,
+        "nom": "Komo-Océan",
+        "parent": {
+            "id": 210,
+            "nom": "Estuaire",
+            "parent": {
+                "id": 72,
+                "nom": "Gabon",
+                "parent": null,
+                "typeEntGeo": {
+                    "id": 1,
+                    "nom": "Pays"   
+                }
+            },
+            "typeEntGeo": {
+                "id": 2,
+                "nom": "Province"
+            }
+        },
+        "typeEntGeo": {
+            "id": 3,
+            "nom": "Département"
+        }
+    },
+    "typeEntGeo": {
+        "id": 4,
+        "nom": "Ville"
+    }
+}
