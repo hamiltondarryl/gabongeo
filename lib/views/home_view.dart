@@ -87,45 +87,36 @@ class _HomeViewState extends State<HomeView> {
               children: [
                 ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const ProvinceView()));
-                    }, child: const Text("PROVINCES")),
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ProvinceView()));
+                    },
+                    child: const Text("PROVINCES")),
                 ElevatedButton(
-                  onPressed: () =>
-                      showModalBottomSheet(
-                        context: context, 
-                        builder: (context){
-                            return Container(
-                              padding: const EdgeInsets.all(20),
-                              height: 400,
-                              width: double.infinity,
-                              child: Column(
-                                children: const [
-                                  Text("Ancienne colonie française, le Gabon est indépendant depuis le 17 août 1960.C’est un pays forestier où la faune et la flore sont encore bien conservées et protégées dans treize parcs nationaux dont les parcs nationaux de la Lopé et d'Ivindo, inscrits au patrimoine mondial par l'UNESCO. Une faible population, d'importantes ressources forestières et un pétrole abondant ont permis au Gabon d'être l'un des pays les plus prospères d'Afrique. Le pays affiche l'indice de développement humain le plus élevé d'Afrique subsaharienne selon l'Organisation des Nations unies, disposant du deuxième revenu par habitant derrière la Guinée équatoriale et devant le Botswana. Le PIB a augmenté de plus de 6 % par an pour la période 2010-2012.", textAlign: TextAlign.justify,
-                style: TextStyle(fontSize: 16))
-                                ],
-                              ),
-                            );
-                        }
-                      ), 
-                  child: const Text('DETAILS'))
+                    onPressed: () => showModalBottomSheet(
+                        context: context,
+                        builder: (context) {
+                          return Container(
+                            padding: const EdgeInsets.all(20),
+                            height: 400,
+                            width: double.infinity,
+                            child: Column(
+                              children: const [
+                                Text(
+                                    "Ancienne colonie française, le Gabon est indépendant depuis le 17 août 1960.C’est un pays forestier où la faune et la flore sont encore bien conservées et protégées dans treize parcs nationaux dont les parcs nationaux de la Lopé et d'Ivindo, inscrits au patrimoine mondial par l'UNESCO. Une faible population, d'importantes ressources forestières et un pétrole abondant ont permis au Gabon d'être l'un des pays les plus prospères d'Afrique. Le pays affiche l'indice de développement humain le plus élevé d'Afrique subsaharienne selon l'Organisation des Nations unies, disposant du deuxième revenu par habitant derrière la Guinée équatoriale et devant le Botswana. Le PIB a augmenté de plus de 6 % par an pour la période 2010-2012.",
+                                    textAlign: TextAlign.justify,
+                                    style: TextStyle(fontSize: 16))
+                              ],
+                            ),
+                          );
+                        }),
+                    child: const Text('DETAILS'))
               ],
             )
           ],
         ),
       ),
     );
-  }
-
-  void _showSettingsPanel(context) {
-    showBottomSheet(
-        context: context,
-        builder: (context) {
-          return Container(
-            height: 300,
-            padding:
-                const EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),
-            child: const Text('bottom sheet'),
-          );
-        });
   }
 }
